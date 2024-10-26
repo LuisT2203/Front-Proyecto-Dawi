@@ -24,7 +24,7 @@ public class LoginController {
     @Autowired
     private AutenticacionClient autenticacionClient;
 
-    @GetMapping("/inicio")
+    @GetMapping("/")
     public String inicio(Model model) {
         LoginModel loginModel = new LoginModel("00", "", "","");
         model.addAttribute("loginModel", loginModel);
