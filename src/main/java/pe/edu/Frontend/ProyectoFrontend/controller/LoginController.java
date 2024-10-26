@@ -24,12 +24,7 @@ public class LoginController {
     @Autowired
     private AutenticacionClient autenticacionClient;
 
-    @GetMapping("/")
-    public String inicio(Model model) {
-        LoginModel loginModel = new LoginModel("00", "", "","");
-        model.addAttribute("loginModel", loginModel);
-        return "inicio";
-    }
+
 
     @PostMapping("/autenticar")
     public String autenticar(@RequestParam("codigo") String codigo,
